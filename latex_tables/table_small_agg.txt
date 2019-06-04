@@ -1,0 +1,44 @@
+\begin{table}[]
+\begin{tabular}{lll}
+S\&P 500 (Small cap)  & Aggregated model & Split model \\ \hline
+$\beta_{total}^{ff}$  & 0.0416  & \\
+                      & (0.1770)         &  \\
+$\beta_{\Delta total}^{etf}$  & 1.0363  & \\
+                      & **(0.0000)         &  \\
+$\beta_{large}^{ff}$  &        & 0.0038 \\
+                      &         & (0.9282) \\
+$\beta_{mid}^{ff}$  &        & -0.2195 \\
+                      &         & (0.3604) \\
+$\beta_{small}^{ff}$  &        & 0.3107 \\
+                      &         & (0.1961) \\
+$\beta_{\Delta large}^{etf}$  &        & 1.6540 \\
+                      &         & **(0.0000) \\
+$\beta_{\Delta mid}^{etf}$  &        & -2.6238 \\
+                      &         & (0.4740) \\
+$\beta_{\Delta small}^{etf}$  &        & 1.2340 \\
+                      &         & (0.2212) \\
+$\beta_{other}^{etf}$  &        & -1.1931 \\
+                      &         & (0.1263) \\ \hline 
+$\beta_{intercept}$  & 0.0482  & 0.0676 \\
+                      & *(0.0387)          & **(0.0075) \\
+$\beta_{\Delta VIX}$  & 0.0016  & 0.0017 \\
+                      & (0.2515)          & (0.2419) \\
+$\beta_{recession}$  & 0.0578  & 0.0658 \\
+                      & **(0.0026)          & **(0.0008) \\
+$\beta_{AR1}$  & 0.4418  & 0.3695 \\
+                      & **(0.0000)          & **(0.0000) \\
+$\beta_{AR2}$  & 0.2346  & 0.2375 \\
+                      & **(0.0005)          & **(0.0004) \\
+$\beta_{AR3}$  & 0.0647  & 0.0517 \\
+                      & (0.2879)          & (0.4059) \\ \hline
+ $R^2_{adjusted}$      & 0.6104  & 0.6285 \\ \hline
+& Regression test p-values  &  \\ \hline
+F-test vs constant model & XXXX & XXXX  \\ 
+JB test (normality)& 0.1789 & 0.5000  \\ 
+White's test (Homoscedasticity)& **0.0003 & *0.0171  \\ 
+BG test(Autocorrelation)& 0.1857 & 0.3049  \\ 
+RESET test (correct functional form)& **0.0000 & **0.0000  \\ 
+\end{tabular}
+\caption{Estimated coefficients,$R^2$ and assumption test p-values. Estimated coefficients  are given along with t-test p-values. P-values significant at a significance level of 5\% are highlighted with one star, and those significant at a 1\% significance level are highlighted with two stars.}
+\label{tab:small_cap}
+\end{table}
