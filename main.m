@@ -42,7 +42,7 @@ addpath('ARMAX_GARCH_K_SK_Toolbox')
 if load_excel_files
     [sp500_prices,sp400_prices,sp600_prices,sp500_market_cap,sp400_market_cap,sp600_market_cap,ETF_volume,sp500_volume,fund_flow,sp500_names,sp400_names,sp600_names,VIX,timestamps_daily,timestamps_monthly,GSPC_prices] = read_excel_monthly();
 else
-    load('monthly_raw_data\monthly_raw_data.mat')
+    load('monthly_raw_data/monthly_raw_data.mat')
 end
     
 fprintf('\nData loading complete. ')
@@ -331,13 +331,13 @@ left_color = [1    0    0];
 right_color = [0    0   1];
 set(fig,'defaultAxesColorOrder',[left_color; right_color]);
 yyaxis left
-plot(datenum(timestamps_monthly(1+diff_taken:end)),recession(1+diff_taken:end),'r')
+plot(datenum(timestamps_monthly(1+diff_taken:end)),recession(1+diff_taken:end),'r','linewidth',1.5)
 hold on
-plot(datenum(timestamps_monthly(1+diff_taken:end)),weighted_avg_corr(1+diff_taken:end),'--r')
+plot(datenum(timestamps_monthly(1+diff_taken:end)),weighted_avg_corr(1+diff_taken:end),'-r','linewidth',0.5)
 ylabel('Markov probability/weighted average correlation')
 ylim([0,1.3])
 yyaxis right
-plot(datenum(timestamps_monthly(1+diff_taken:end)),GSPC_prices(1+diff_taken:end),'-b')
+plot(datenum(timestamps_monthly(1+diff_taken:end)),GSPC_prices(1+diff_taken:end),'-b','linewidth',0.5)
 ylabel('S&P 500 price')
 datetick('x','mmm,yy','keepticks')
 title('Inferred probability of being in a bear market over time')
